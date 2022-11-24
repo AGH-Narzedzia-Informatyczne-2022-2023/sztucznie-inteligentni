@@ -5,7 +5,7 @@ Nasza wersja znanej gry Flappy Bird. Gra jest tzw. side-scrollerem; protagonist�
 # Autorzy
 * Amelia Adamczuk
 * Kamila Błaszczyna
-* Kinga Alibożek
+* Kinga Alibożek ;))
 * Paweł Froń
 * Radosław Barszczak
 * Saranjil Amarsaikhan
