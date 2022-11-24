@@ -9,3 +9,5 @@ Nasza wersja znanej gry Flappy Bird. Gra jest tzw. side-scrollerem; protagonist�
 * Paweł Froń
 * Radosław Barszczak
 * Saranjil Amarsaikhan
+
+something added
