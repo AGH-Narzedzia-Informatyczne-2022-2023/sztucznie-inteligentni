@@ -14,4 +14,10 @@ Gra została oryginalnie stworzona przez Dong Nguyen.
 * Radosław Barszczak
 * Saranjil Amarsaikhan
 
+
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+
+ljjhgdyihlo
+something add
+vNFXvjcxmvcv cx
 piszę coś, żeby stworzyć konflikt
