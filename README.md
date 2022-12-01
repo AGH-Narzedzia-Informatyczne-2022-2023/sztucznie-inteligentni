@@ -12,4 +12,5 @@ Nasza wersja znanej gry Flappy Bird. Gra jest tzw. side-scrollerem; protagonistÄ
 
 something add
 vNFXvjcxmvcv cx
+Tworzymy konflikt :)
 
