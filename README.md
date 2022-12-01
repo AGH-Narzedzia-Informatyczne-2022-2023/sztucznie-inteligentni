@@ -10,4 +10,3 @@ Nasza wersja znanej gry Flappy Bird. Gra jest tzw. side-scrollerem; protagonist�
 * Radosław Barszczak
 * Saranjil Amarsaikhan
 
-ja coś piszę 
