@@ -14,4 +14,18 @@ Gra została oryginalnie stworzona przez Dong Nguyen.
 * Radosław Barszczak
 * Saranjil Amarsaikhan
 
+
+=======
+
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+
+
+something add
+vNFXvjcxmvcv cx
+
+
+# Mysle ze koty sa git
+=======
 piszę coś, żeby stworzyć konflikt
+
+# koty gites
