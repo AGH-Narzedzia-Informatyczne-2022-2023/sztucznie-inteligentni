@@ -20,3 +20,4 @@ vNFXvjcxmvcv cx
 
 
 # Mysle ze koty sa git
+# koty gites
