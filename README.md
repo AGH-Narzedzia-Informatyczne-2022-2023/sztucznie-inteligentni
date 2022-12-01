@@ -12,7 +12,7 @@ Nasza wersja znanej gry Flappy Bird. Gra jest tzw. side-scrollerem; protagonistÄ
 
 kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 
-
+ljjhgdyihlo
 something add
 vNFXvjcxmvcv cx
 
