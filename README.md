@@ -13,3 +13,5 @@ Gra została oryginalnie stworzona przez Dong Nguyen.
 * Paweł Froń
 * Radosław Barszczak
 * Saranjil Amarsaikhan
+
+piszę coś, żeby stworzyć konflikt
