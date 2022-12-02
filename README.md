@@ -30,8 +30,4 @@ piszę coś, żeby stworzyć konflikt
 
 # koty gites
 
-<<<<<<< HEAD
-this is some content to mess with
-content to append
-=======
-,,,,
+
