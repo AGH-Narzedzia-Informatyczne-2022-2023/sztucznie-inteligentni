@@ -17,3 +17,4 @@ Gra została oryginalnie stworzona przez Dong Nguyen.
 Tworzymy konflikt :)
 
 piszę coś, żeby stworzyć konflikt :) 
+konflikt
