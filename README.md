@@ -21,7 +21,7 @@ kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 
 
 something add
-vNFXvjcxmvcv cx
+vNFXvjcxmvcv cd
 
 
 # Mysle ze koty sa git
