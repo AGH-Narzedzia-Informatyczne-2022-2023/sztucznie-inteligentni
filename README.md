@@ -21,7 +21,7 @@ kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 
 
 something add
-vNFXvjcxmvcv cx
+vNFXvjcxmvcv c
 
 
 # Mysle ze koty sa git
