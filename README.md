@@ -30,4 +30,6 @@ piszę coś, żeby stworzyć konflikt
 
 # koty gites
 
-=======
+<<<
+konflikt
+<<<,.,
