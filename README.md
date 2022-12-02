@@ -11,3 +11,6 @@ Nasza wersja znanej gry Flappy Bird. Gra jest tzw. side-scrollerem; protagonistÄ
 * Saranjil Amarsaikhan
 
 
+============
+jhfhdsasdfghjkl
+============
