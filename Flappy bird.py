@@ -30,7 +30,7 @@ ground_img = pygame.image.load('img/ground.png')
 
     #draw and scroll the ground
     screen.blit(ground.img, (ground_scroll,768))
-    ground_scroll == scroll_speed
+    ground_scroll -= scroll_speed
     if abs(ground_scroll) > 35:
         ground_scroll = 0
 
