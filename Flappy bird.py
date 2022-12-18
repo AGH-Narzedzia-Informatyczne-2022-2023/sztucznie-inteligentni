@@ -23,13 +23,13 @@ ground_img = pygame.image.load('img/ground.png')
 run = True
 while run:
 
-    Clock.tick(fps)
+    clock.tick(fps)
 
     #draw background
     screen.blit(bg, (0,0))
 
     #draw and scroll the ground
-    screen.blit(ground.img, (ground_scroll,768))
+    screen.blit(ground_img, (ground_scroll,768))
     ground_scroll -= scroll_speed
     if abs(ground_scroll) > 35:
         ground_scroll = 0
@@ -38,6 +38,6 @@ while run:
         if event.type == pygame.QUIT:
             run = False
 
-    pygame.display.udate()
+    pygame.display.update()
 
 pygame.quit()
