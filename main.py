@@ -75,6 +75,11 @@ class Player(pygame.sprite.Sprite):
             self.image = pygame.transform.rotate(self.images[self.index], -90)
 
 
+class Pipe(pygame, sprite, Sprite):
+ def __init__(self, x, y):
+  pygame.sprite.Sprite.__init__(self)
+          
+          
 # 2.6. Creating the player
 player_group = pygame.sprite.Group()
 player = Player(100, screen_width // 2)
