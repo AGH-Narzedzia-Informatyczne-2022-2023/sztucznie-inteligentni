@@ -1,5 +1,6 @@
 import pygame
 from pygame.locals import *
+import random
 
 # --- 1. Initializing
 pygame.init()
@@ -22,6 +23,9 @@ scroll_speed = 4
 animation_cooldown = 5
 flying = False
 game_over = False
+pipe_gap = 150
+pipe_frequency = 1500 #miliseconds
+last_pipe = pygame.time.get_ticks() - pipe_frequency
 
 # --- 2. Player class
 class Player(pygame.sprite.Sprite):
@@ -75,15 +79,32 @@ class Player(pygame.sprite.Sprite):
             self.image = pygame.transform.rotate(self.images[self.index], -90)
 
 
+# 4.1 Pipe class
 class Pipe(pygame, sprite, Sprite):
- def __init__(self, x, y):
-  pygame.sprite.Sprite.__init__(self)
+    def __init__(self, x, y, position):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load('img/pipe.png') #zrobić obrazek pipe
+        self.rect = self.image.get_rect()
+        # position 1 is from the top, -1 from the bottom
+        if position == 1:
+            self.image = pygame.transform.flip(self.image, False, True)
+            self.rect.bottomleft = [x, y - int(pipe_gap / 2)]
+        if position == -1:
+            self.rect.topleft = [x, y + int(pipe_gap / 2)]
+
+    def update(self):
+        self.rect.x -= scroll_speed
+        if self.rect.right < 0:
+            self.kill()
           
           
 # 2.6. Creating the player
 player_group = pygame.sprite.Group()
 player = Player(100, screen_width // 2)
 player_group.add(player)
+
+# 4.2 Creating pipes
+pipe_group = pygame.sprite.Sprite
 
 # --- 3. Game loop
 run = True
@@ -95,19 +116,39 @@ while run:
     screen.blit(bg, (0, 0))
     screen.blit(ground_img, (ground_scroll, 768))
     
+    # 4.3 Collision
+    if pygame.sprite.groupcollide(player_group, pipe_group, False, False) or player.rect.bottom < 0:
+        game_over = True
+
     # 3.2. Check if player has hit the ground 
-    if player.rect.bottom > 768:
+    if player.rect.bottom >= 768:
         game_over = True
         flying = False
     
-    if game_over == False:
+    if game_over == False and flying == True:
+        # 4.4 Generating new pipes
+        time_now = pygame.time.get_ticks()
+        if time_now - last_pipe > pipe_frequency:
+            pipe_height = random.randint(100, 100)
+            btm_pipe = Pipe(screen_width, (screen_height // 2) + pipe_height, -1)
+            top_pipe = Pipe(screen_width, (screen_height // 2) + pipe_height, 1)
+            pipe_group.add(btm_pipe)
+            pipe_group.add(top_pipe)
+            last_pipe = time_now
+
+
         ground_scroll -= scroll_speed
         if abs(ground_scroll) > 35:
             ground_scroll = 0
+
+        pipe_group.update()
          
     # 3.3. Drawing and animating the player
     player_group.draw(screen)
     player_group.update()
+
+    # 4.5 Drawing pipes
+    pipe_group.draw(screen)
 
     # 3.4. Listening for events
     for event in pygame.event.get():
