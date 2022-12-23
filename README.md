@@ -9,7 +9,7 @@ Gra została oryginalnie stworzona przez Dong Nguyen.
 # Autorzy
 * Amelia Adamczuk
 * Kamila Błaszczyna
-* Kinga Alibożek ;))
+* Kinga Alibożek
 * Paweł Froń
 * Radosław Barszczak
 * Saranjil Amarsaikhan
