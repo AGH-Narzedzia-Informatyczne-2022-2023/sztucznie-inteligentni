@@ -23,7 +23,7 @@ scroll_speed = 4
 animation_cooldown = 5
 flying = False
 game_over = False
-pipe_gap = 150
+pipe_gap = 250
 pipe_frequency = 1500 #miliseconds
 last_pipe = pygame.time.get_ticks() - pipe_frequency
 
@@ -74,13 +74,13 @@ class Player(pygame.sprite.Sprite):
             self.image = self.frames[self.index]
             
             # 2.5. Rotate the player
-            self.image = pygame.transform.rotate(self.images[self.index], self.vel * -2)
+            self.image = pygame.transform.rotate(self.frames[self.index], self.vel * -2)
         else:
-            self.image = pygame.transform.rotate(self.images[self.index], -90)
+            self.image = pygame.transform.rotate(self.frames[self.index], -90)
 
 
 # 4.1 Pipe class
-class Pipe(pygame, sprite, Sprite):
+class Pipe(pygame.sprite.Sprite):
     def __init__(self, x, y, position):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.image.load('img/pipe.png')
@@ -88,9 +88,9 @@ class Pipe(pygame, sprite, Sprite):
         # position 1 is from the top, -1 from the bottom
         if position == 1:
             self.image = pygame.transform.flip(self.image, False, True)
-            self.rect.bottomleft = [x, y - int(pipe_gap / 2)]
+            self.rect.bottomleft = [x, y - pipe_gap // 2]
         if position == -1:
-            self.rect.topleft = [x, y + int(pipe_gap / 2)]
+            self.rect.topleft = [x, y + pipe_gap // 2]
 
     def update(self):
         self.rect.x -= scroll_speed
@@ -104,7 +104,7 @@ player = Player(100, screen_width // 2)
 player_group.add(player)
 
 # 4.2 Creating pipes
-pipe_group = pygame.sprite.Sprite
+pipe_group = pygame.sprite.Group()
 
 # --- 3. Game loop
 run = True
@@ -129,7 +129,7 @@ while run:
         # 4.4 Generating new pipes
         time_now = pygame.time.get_ticks()
         if time_now - last_pipe > pipe_frequency:
-            pipe_height = random.randint(100, 100)
+            pipe_height = random.randint(-100, 100)
             btm_pipe = Pipe(screen_width, (screen_height // 2) + pipe_height, -1)
             top_pipe = Pipe(screen_width, (screen_height // 2) + pipe_height, 1)
             pipe_group.add(btm_pipe)
