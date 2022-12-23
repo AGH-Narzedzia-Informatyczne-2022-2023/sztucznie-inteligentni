@@ -83,7 +83,7 @@ class Player(pygame.sprite.Sprite):
 class Pipe(pygame, sprite, Sprite):
     def __init__(self, x, y, position):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load('img/pipe.png') #zrobić obrazek pipe
+        self.image = pygame.image.load('img/pipe.png')
         self.rect = self.image.get_rect()
         # position 1 is from the top, -1 from the bottom
         if position == 1:
