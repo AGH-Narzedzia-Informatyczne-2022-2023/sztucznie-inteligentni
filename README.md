@@ -3,7 +3,7 @@ Nasza wersja znanej gry Flappy Bird. Gra jest tzw. side-scrollerem; protagonistÄ
 
 ![flappy bird](flappy.jpg)
 
-# Orgyginalny autor
+# Oryginalny autor
 Gra zostaÅ‚a oryginalnie stworzona przez Dong Nguyen.
 
 # Autorzy
